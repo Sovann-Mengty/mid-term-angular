@@ -1,0 +1,26 @@
+<!-- src/app/navbar/navbar.html -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <h1>RealShop</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#" class="nav-link">Explore</a>
+    </div>
+    <div class="nav-search">
+      <div class="search-container">
+        <input type="text" placeholder="Sustainable sneakers brands" class="search-input">
+        <i class="search-icon">🔍</i>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn">❤️</button>
+      <button class="nav-btn position-relative" (click)="openCartPopup()">
+        🛒
+        <span *ngIf="cartCount > 0" class="cart-count">{{ cartCount }}</span>
+      </button>
+      <button class="sign-in-btn">Sign in</button>
+    </div>
+  </div>
+</nav>

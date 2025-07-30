@@ -1,0 +1,28 @@
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let p of products">
+        <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+          <!-- Product Image -->
+          <img 
+            [src]="p.image" 
+            class="card-img-top mx-auto d-block" 
+            [style.width.px]="200" 
+            [style.height.px]="200" 
+            style="object-fit: contain" 
+          />
+
+          <!-- Product Details -->
+          <div class="card-body d-flex flex-column">
+            
+            <h6 class="card-title fw-semibold" style="min-height: 3rem;">{{ p.title }}</h6>
+            <div class="mt-auto">
+              <p class="fw-bold mb-2">$ {{ p.price }}</p>
+              <button class="btn btn-primary w-100" (click)="addToCart(p)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;       /* Make card fill container height */
+}
+
+.card-body {
+  flex-grow: 1;       /* Make body take remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title,
+.card-text {
+  /* Limit the number of lines and add ellipsis */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.card-title {
+   /* 1 line for title */
+  font-weight: 600;
+}
+
+.card-text {
+   /* 2 lines for description */
+  font-size: 0.9rem;
+  color: #6b7280; /* Tailwind gray-500 */
+  margin-bottom: auto; /* push button down */
+}
+
+.btn {
+  margin-top: auto; /* button sticks to bottom */
+}
